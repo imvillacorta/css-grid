@@ -1,0 +1,29 @@
+body {
+    background: rgb(44, 44, 44);
+    margin: 20px;
+}
+
+.wrapper {
+    display: grid;
+    // DEFINE O NUMERO E TAMANHO DE CADA COLUNA, NO CASO 3 COLUNAS DE 200PX CADA
+    // grid-template-columns: 200px 200px 200px; 
+    grid-template-columns: auto auto auto;
+    // DEFINE O NUMERO DE LINHAS E O TAMANHO EM ALTURA DE CADA LINHA, NO CASO VÃO SER 3 LINHAS DE 200PX
+    // grid-template-rows: 200px 200px 200px; 
+    grid-auto-rows: 200px;
+    // DEFINE O ESPAÇAMENTO ENTRE AS COLUNAS
+    // grid-column-gap: 15px; 
+    // DEFINE O ESPAÇAMENTO ENTRE AS LINHAS
+    // grid-row-gap: 10px;
+    grid-gap: 10px; // DEFINE ESPAÇAMENTOS ENTRE LINHAS E COLUNAS
+
+    div {
+        background: rgb(83, 152, 209);
+        padding: 10px;
+        
+        &:nth-child(even) {
+            background: rgb(157, 173, 219);
+        }
+    }
+    
+}
