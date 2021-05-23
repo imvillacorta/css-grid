@@ -1,0 +1,30 @@
+body {
+    background: rgb(44, 44, 44);
+    margin: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, auto));
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+
+    div {
+        background: rgb(83, 152, 209);
+        padding: 10px;
+        
+        &:nth-child(even) {
+            background: rgb(157, 173, 219);
+        }
+
+        &:nth-child(1) {
+            grid-column: 1 / -1;
+        }
+
+        &:nth-child(5) {
+            grid-column: 1 / -1;
+        }
+        
+    }
+    
+}

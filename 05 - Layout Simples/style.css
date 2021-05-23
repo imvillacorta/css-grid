@@ -1,0 +1,31 @@
+body {
+  background: #2c2c2c;
+  margin: 20px;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, auto))[3];
+      grid-template-columns: repeat(3, minmax(200px, auto));
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+}
+
+.wrapper div {
+  background: #5398d1;
+  padding: 10px;
+}
+
+.wrapper div:nth-child(even) {
+  background: #9daddb;
+}
+
+.wrapper div:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+.wrapper div:nth-child(5) {
+  grid-column: 1 / -1;
+}
+/*# sourceMappingURL=style.css.map */
