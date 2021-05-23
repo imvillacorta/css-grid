@@ -5,9 +5,13 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, auto));
-    grid-auto-rows: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(200px, auto));
     grid-gap: 10px;
+
+    @media (min-width: 768px){
+        grid-template-columns: repeat(5, 1fr);
+    }
 
     div {
         background: rgb(83, 152, 209);
@@ -19,6 +23,15 @@ body {
 
         &:nth-child(1) {
             grid-column: 1 / -1;
+        }
+
+        &:nth-child(3){
+            grid-column: 2 / 5;
+
+            @media (max-width: 768px)
+            {
+                grid-column: 1 / -1;
+            }
         }
 
         &:nth-child(5) {

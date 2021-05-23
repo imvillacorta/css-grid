@@ -6,10 +6,18 @@ body {
 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, auto))[3];
-      grid-template-columns: repeat(3, minmax(200px, auto));
-  grid-auto-rows: 200px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (minmax(200px, auto))[3];
+      grid-template-rows: repeat(3, minmax(200px, auto));
   grid-gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .wrapper div {
@@ -23,6 +31,18 @@ body {
 
 .wrapper div:nth-child(1) {
   grid-column: 1 / -1;
+}
+
+.wrapper div:nth-child(3) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+}
+
+@media (max-width: 768px) {
+  .wrapper div:nth-child(3) {
+    grid-column: 1 / -1;
+  }
 }
 
 .wrapper div:nth-child(5) {
