@@ -1,0 +1,45 @@
+body {
+    background: rgb(44, 44, 44);
+    margin: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+
+    grid-template-areas:
+
+    "header header header header"
+    "main   main   main   aside"
+    "footer footer footer footer";
+
+
+    header, main, aside, footer {
+        background: rgb(83, 152, 209);
+        padding: 10px;
+        
+        &:nth-child(even) {
+            background: rgb(157, 173, 219);
+        }
+        
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+    
+}
