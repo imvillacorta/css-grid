@@ -1,0 +1,89 @@
+body {
+    background: rgb(49, 49, 49);
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "headers"
+        "sidebar"
+        "banner"
+        "subs1"
+        "subs2"
+        "subs3"
+        "subs4"
+        "subs5"
+        "subs6"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    height: 100vh;
+
+    @media (min-width: 48em) { //768px de largura 
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: .5fr 1fr .5fr 1fr .5fr .5fr;
+        grid-template-areas:
+            "headers headers headers headers headers headers headers headers headers headers"
+            ".       .       banner  banner  banner  banner  banner  banner  .       ."
+            ".       .       subs1   subs2   subs3   subs4   subs5   subs6   .       ."
+            ".       .       main    main    main    main    main    main    .       ."
+            "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar .       ."
+            "footer  footer  footer  footer  footer  footer  footer  footer  footer  footer";
+    }
+
+    .header {
+        background: #ccc;
+        grid-area: headers;
+    }
+
+    .sidebar {
+        background: rgb(145, 145, 145);
+        grid-area: sidebar;
+    }
+
+    .main {
+        background: #ccc;
+        grid-area: main;
+    }
+
+    .banner {
+        background: rgb(145, 145, 145);
+        grid-area: banner;
+    }
+
+    .sub1 {
+        background: orange;
+        grid-area: subs1;
+    }
+
+    .sub2 {
+        background: orange;
+        grid-area: subs2;
+    }
+
+    .sub3 {
+        background: orange;
+        grid-area: subs3;
+    }
+
+    .sub4 {
+        background: orange;
+        grid-area: subs4;
+    }
+
+    .sub5 {
+        background: orange;
+        grid-area: subs5;
+    }
+
+    .sub6 {
+        background: orange;
+        grid-area: subs6;
+    }
+
+    .footer {
+        background: rgb(145, 145, 145);
+        grid-area: footer;
+    }
+}

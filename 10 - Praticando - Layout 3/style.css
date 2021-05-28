@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 5rem 3rem 1fr 3rem;
+      grid-template-rows: 5rem 3rem 1fr 3rem;
+      grid-template-areas: "headers headers headers    headers    headers    headers    headers    headers    headers    headers    headers    headers" "sidebar sidebar breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb" "sidebar sidebar main       main       main       main       main       main       main       main       main       main" "footer  footer  footer     footer     footer     footer     footer     footer     footer     footer     footer     footer";
+  height: 100vh;
+}
+
+.header {
+  background: orange;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: headers;
+}
+
+.sidebar {
+  background: gray;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sidebar;
+}
+
+.breadcrumb {
+  background: black;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 10;
+  grid-area: breadcrumb;
+  color: #fff;
+}
+
+.content {
+  background: #fff;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 10;
+  grid-area: main;
+}
+
+.footer {
+  background: blueviolet;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: footer;
+}
+/*# sourceMappingURL=style.css.map */

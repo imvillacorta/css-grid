@@ -1,0 +1,57 @@
+body {
+    background: rgb(49, 49, 49);
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "headers"
+        "sidebar"
+        "main"
+        "aside-main"
+        "aside-secondary"
+        "footer";
+    grid-template-columns: 1fr;
+    height: 100vh;
+
+    @media (min-width: 48em) { //768px de largura 
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: .5fr 2fr .5fr .5fr;
+        grid-template-areas:
+            "headers headers    headers     headers         headers         headers"
+            ".       main       main        main            sidebar         ."
+            ".       aside-main aside-main aside-secondary  aside-secondary ."
+            "footer  footer     footer     footer           footer          footer";
+    }
+
+    .header {
+        background: #ccc;
+        grid-area: headers;
+    }
+
+    .sidebar {
+        background: rgb(145, 145, 145);
+        grid-area: sidebar;
+    }
+
+    .main {
+        background: #ccc;
+        grid-area: main;
+    }
+
+    .aside-main {
+        background: rgb(145, 145, 145);
+        grid-area: aside-main;
+    }
+
+    .aside-sec {
+        background: #ccc;
+        grid-area: aside-secondary;
+    }
+
+    .footer {
+        background: rgb(145, 145, 145);
+        grid-area: footer;
+    }
+}

@@ -1,0 +1,101 @@
+body {
+  background: #313131;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5rem;
+      grid-template-areas: "headers" "sidebar" "banner" "subs1" "subs2" "subs3" "subs4" "subs5" "subs6" "main" "footer";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+@media (min-width: 48em) {
+  .wrapper {
+    -ms-grid-columns: (1fr)[10];
+        grid-template-columns: repeat(10, 1fr);
+    -ms-grid-rows: .5fr 1fr .5fr 1fr .5fr .5fr;
+        grid-template-rows: .5fr 1fr .5fr 1fr .5fr .5fr;
+        grid-template-areas: "headers headers headers headers headers headers headers headers headers headers" ".       .       banner  banner  banner  banner  banner  banner  .       ." ".       .       subs1   subs2   subs3   subs4   subs5   subs6   .       ." ".       .       main    main    main    main    main    main    .       ." "sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar .       ." "footer  footer  footer  footer  footer  footer  footer  footer  footer  footer";
+  }
+}
+
+.wrapper .header {
+  background: #ccc;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: headers;
+}
+
+.wrapper .sidebar {
+  background: #919191;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.wrapper .main {
+  background: #ccc;
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.wrapper .banner {
+  background: #919191;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: banner;
+}
+
+.wrapper .sub1 {
+  background: orange;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: subs1;
+}
+
+.wrapper .sub2 {
+  background: orange;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: subs2;
+}
+
+.wrapper .sub3 {
+  background: orange;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: subs3;
+}
+
+.wrapper .sub4 {
+  background: orange;
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: subs4;
+}
+
+.wrapper .sub5 {
+  background: orange;
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: subs5;
+}
+
+.wrapper .sub6 {
+  background: orange;
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: subs6;
+}
+
+.wrapper .footer {
+  background: #919191;
+  -ms-grid-row: 11;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+/*# sourceMappingURL=style.css.map */

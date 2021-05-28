@@ -1,0 +1,66 @@
+body {
+  background: #313131;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5rem;
+      grid-template-areas: "headers" "sidebar" "main" "aside-main" "aside-secondary" "footer";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+@media (min-width: 48em) {
+  .wrapper {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: .5fr 2fr .5fr .5fr;
+        grid-template-rows: .5fr 2fr .5fr .5fr;
+        grid-template-areas: "headers headers    headers     headers         headers         headers" ".       main       main        main            sidebar         ." ".       aside-main aside-main aside-secondary  aside-secondary ." "footer  footer     footer     footer           footer          footer";
+  }
+}
+
+.wrapper .header {
+  background: #ccc;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: headers;
+}
+
+.wrapper .sidebar {
+  background: #919191;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+}
+
+.wrapper .main {
+  background: #ccc;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.wrapper .aside-main {
+  background: #919191;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: aside-main;
+}
+
+.wrapper .aside-sec {
+  background: #ccc;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: aside-secondary;
+}
+
+.wrapper .footer {
+  background: #919191;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+/*# sourceMappingURL=style.css.map */

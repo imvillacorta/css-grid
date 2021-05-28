@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;  
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 5rem 3rem 1fr 3rem;
+    grid-template-areas: 
+    "headers headers headers    headers    headers    headers    headers    headers    headers    headers    headers    headers"
+    "sidebar sidebar breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb"
+    "sidebar sidebar main       main       main       main       main       main       main       main       main       main"
+    "footer  footer  footer     footer     footer     footer     footer     footer     footer     footer     footer     footer"
+    ;
+    height: 100vh;
+}
+
+.header {
+    background: orange;
+    grid-area: headers;
+}
+
+.sidebar {
+    background: gray;
+    grid-area: sidebar;
+}
+
+.breadcrumb {
+    background: black;
+    grid-area: breadcrumb;
+    color: #fff;
+}
+
+.content {
+    background: #fff;
+    grid-area: main;
+}
+
+.footer {
+    background: blueviolet;
+    grid-area: footer;
+}
